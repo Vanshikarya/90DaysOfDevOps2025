@@ -1,0 +1,191 @@
+Networking plays a crucial role in the life of a DevOps engineer. On a daily basis, DevOps professionals encounter various scenarios where a strong understanding of networking fundamentals is essential. As DevOps emphasizes automation and scalability, networking serves as a critical backbone, ensuring efficient communication, security, and performance across infrastructure components.
+
+In this, we will go through the below topics:
+
+1)OSI & TCP/IP Models
+
+2)Switch/Router
+
+3)Protocols
+
+4)Ports
+
+1)OSI & TCP/IP Models
+
+1.Application Layer (OSI & TCP/IP) – User Interaction
+
+🔹 The closest layer to the end user, providing network services.
+🔹 Handles protocols like HTTP (web browsing), SMTP (email), FTP (file transfers).
+🔹 Example: Chrome, WhatsApp, Gmail.
+
+📌 Real-Life Example: A web browser that helps users send and receive information over the internet.
+
+2️⃣ Presentation Layer (OSI) – Data Formatting & Encryption
+
+🔹 Converts data into a format that the application layer understands.
+🔹 Handles encryption & compression for security and efficiency.
+🔹 Example: SSL/TLS (used in HTTPS), JPEG, MP3.
+
+📌 Real-Life Example: Translating a book into different languages so everyone can understand it.
+
+🔹 In TCP/IP Model: This function is part of the Application Layer.
+
+3️⃣ Session Layer (OSI) – Managing Connections
+
+🔹 Manages and controls sessions (connections) between applications.
+🔹 Ensures data flows in an organized manner between devices.
+🔹 Example: Logging into a website and maintaining an active session.
+
+📌 Real-Life Example: A phone call, where a session is established, maintained, and then ended.
+
+🔹 In TCP/IP Model: This function is part of the Application Layer.
+
+4️⃣ Transport Layer (OSI & TCP/IP) – Reliable Data Delivery
+
+🔹 Ensures end-to-end communication and reliable data transfer.
+🔹 Uses protocols like TCP (reliable, connection-oriented) and UDP (faster, connectionless).
+🔹 Example: TCP (for web browsing, email), UDP (for online gaming, video streaming).
+
+📌 Real-Life Example: Choosing between a guaranteed delivery service (TCP) or a faster, but uncertain courier (UDP).
+
+5️⃣ Network Layer (OSI) / Internet Layer (TCP/IP) – Addressing & Routing
+
+🔹 Assigns IP addresses and routes data between different networks.
+🔹 Uses routers to determine the best path for data packets.
+🔹 Example: IP, ICMP, Routers.
+
+📌 Real-Life Example: A GPS guiding a car through different routes to reach its destination.
+
+6️⃣ Data Link Layer (OSI) / Network Access Layer (TCP/IP) – Reliable Data Transfer
+
+🔹 Ensures error-free data transmission between two connected nodes.
+🔹 Uses MAC addresses for identifying devices in a local network.
+🔹 Example: Ethernet, Wi-Fi (802.11), Switches.
+
+📌 Real-Life Example: The postal office checks and corrects the address on a letter before delivering it.
+
+🔹 In TCP/IP Model: This function is part of the Network Access Layer.
+
+7️⃣ Physical Layer (OSI) / Network Access Layer (TCP/IP) – The Hardware Connection
+
+🔹 Responsible for transmitting raw data (bits) over a physical medium.
+🔹 Deals with cables, switches, network cards, fiber optics, and signals.
+🔹 Example: Ethernet cables, Wi-Fi signals, Bluetooth.
+
+📌 Real-Life Example: Imagine sending a letter via post. The letter (data) is carried by a truck (network cables) to its destination.
+
+🔹 In TCP/IP Model: This function is part of the Network Access Layer.
+
+How Data Moves Through the OSI and TCP/IP Models
+
+📡 Sending Data: Application → Presentation → Session → Transport → Network → Data Link → Physical (OSI).
+📨 Receiving Data: Physical → Data Link → Network → Transport → Session → Presentation → Application (OSI).
+
+📡 TCP/IP Data Flow: Application → Transport → Internet → Network Access.
+📨 Receiving Data (TCP/IP): Network Access → Internet → Transport → Application.
+
+This flow ensures efficient communication between devices.
+
+2. Switch vs. Router
+
+Networking devices like switches and routers play crucial roles in managing data flow within and across networks.
+
+Switch
+
+Operates at the Data Link Layer (Layer 2).
+
+Forwards data based on MAC addresses.
+
+Used to connect devices within the same network (LAN).
+
+Learns and stores MAC addresses for efficient data delivery.
+
+Router
+
+Works at the Network Layer (Layer 3).
+
+Routes data based on IP addresses.
+
+Connects different networks (LAN to WAN or the internet).
+
+Uses protocols like RIP, OSPF, and BGP for routing.
+
+3. Networking Protocols
+
+Protocols are rules that govern data transmission. Some commonly used networking protocols include:
+
+HTTP/HTTPS – Web browsing and secure communication.
+
+FTP (File Transfer Protocol) – Transfers files between computers.
+
+SMTP/IMAP/POP3 – Email communication protocols.
+
+DNS (Domain Name System) – Translates domain names to IP addresses.
+
+DHCP (Dynamic Host Configuration Protocol) – Assigns IP addresses dynamically.
+
+ICMP (Internet Control Message Protocol) – Used for network diagnostics (e.g., ping command).
+
+4. Ports: The Communication Endpoints
+
+Ports help in identifying specific applications or services running on a device. Each protocol uses designated ports to communicate.
+
+Commonly Used Ports:
+
+Port 80 (HTTP), Port 443 (HTTPS) – Web traffic.
+
+Port 21 (FTP), Port 22 (SSH) – File transfer and secure shell.
+
+Port 25 (SMTP), Port 110 (POP3), Port 143 (IMAP) – Email protocols.
+
+Port 53 (DNS) – Domain name resolution.
+
+Port 67/68 (DHCP) – Assigning dynamic IP addresses.
+
+Why are Ports Important? Ports allow multiple applications to run on a single device without interference. Firewalls and network security mechanisms use port numbers to permit or block traffic.
+
+5. Essential Networking Commands Cheat Sheet
+
+Ping (Check Connectivity)
+
+Purpose: Tests if a host is reachable on the network.
+
+Usage: ping <hostname or IP>
+
+Example: ping google.com
+
+Traceroute / Tracert (Trace Packet Routes)
+
+Purpose: Displays the route packets take to a destination.
+
+Linux/macOS: traceroute <hostname or IP>
+
+Windows: tracert <hostname or IP>
+
+Example: traceroute google.com
+
+Netstat (Network Statistics)
+
+Purpose: Shows active connections, routing tables, and network statistics.
+
+Usage: netstat -an
+
+Example: netstat -tulnp (Shows listening ports on Linux)
+
+Curl (Make HTTP Requests)
+
+Purpose: Fetches data from URLs and APIs.
+
+Usage: curl <URL>
+
+Example: curl -I https://www.google.com (Fetches HTTP headers)
+
+Dig / Nslookup (DNS Lookup)
+
+Purpose: Queries DNS records to resolve domain names.
+
+Linux/macOS: dig <domain>
+
+Windows: nslookup <domain>
+
+Example: dig google.com or nslookup google.com
